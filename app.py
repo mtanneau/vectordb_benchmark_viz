@@ -110,24 +110,32 @@ fig_build_time = px.bar(
     df[(df["step"] == "build") & (df["k"] == 10)],
     x="backend",
     y="wall_time_sec",
+    color="backend",
+    labels={"wall_time_sec": "Build time (s)", "k": "top-k neighbors"},
 )
 fig_build_memory = px.bar(
     df[(df["step"] == "build") & (df["k"] == 10)],
     x="backend",
     y="memory",
+    color="backend",
+    labels={"memory": "Memory (Mb)", "k": "top-k neighbors"},
 )
 
+# Search figures
 fig_search_time = px.line(
     df[(df["step"] == "search")],
     x="k",
     y="wall_time_sec",
     color="backend",
+    labels={"wall_time_sec": "Average search time (ms)", "k": "top-k neighbors"},
 )
 fig_search_memory = px.line(
     df[(df["step"] == "search")],
     x="k",
     y="memory",
     color="backend",
+    labels={"memory": "Memory (Mb)", "k": "top-k neighbors"},
+)
 )
 
 # Dash app setup
