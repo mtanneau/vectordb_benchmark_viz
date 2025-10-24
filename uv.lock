@@ -462,7 +462,7 @@ wheels = [
 ]
 
 [[package]]
-name = "vectordb-benchmark-vix"
+name = "vectordb-benchmark-viz"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
