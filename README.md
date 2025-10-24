@@ -1,1 +1,1 @@
-# vectordb_benchmark_vix
+# vectordb_benchmark_viz
