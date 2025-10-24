@@ -136,6 +136,37 @@ fig_search_memory = px.line(
     color="backend",
     labels={"memory": "Memory (Mb)", "k": "top-k neighbors"},
 )
+
+# Update-add
+fig_update_add_time = px.bar(
+    df[(df["step"] == "update-add") & (df["k"] == 10)],
+    x="backend",
+    y="wall_time_sec",
+    color="backend",
+    labels={"wall_time_sec": "Average update time (ms)", "k": "top-k neighbors"},
+)
+fig_update_add_memory = px.bar(
+    df[(df["step"] == "update-add") & (df["k"] == 10)],
+    x="backend",
+    y="memory",
+    color="backend",
+    labels={"memory": "Memory (Mb)", "k": "top-k neighbors"},
+)
+
+# Update-del
+fig_update_del_time = px.bar(
+    df[(df["step"] == "update-del") & (df["k"] == 10)],
+    x="backend",
+    y="wall_time_sec",
+    color="backend",
+    labels={"wall_time_sec": "Average update time (ms)", "k": "top-k neighbors"},
+)
+fig_update_del_memory = px.bar(
+    df[(df["step"] == "update-del") & (df["k"] == 10)],
+    x="backend",
+    y="memory",
+    color="backend",
+    labels={"memory": "Memory (Mb)", "k": "top-k neighbors"},
 )
 
 # Dash app setup
@@ -173,7 +204,7 @@ app.layout = html.Div(
         html.Div(
             [
                 dcc.Graph(
-                    id="fig-build-time",
+                    id="fig-search-time",
                     figure=fig_search_time,
                     style={
                         # Setting max width, max height and margin bottom.
@@ -183,8 +214,58 @@ app.layout = html.Div(
                     },
                 ),
                 dcc.Graph(
-                    id="fig-build-memory",
+                    id="fig-search-memory",
                     figure=fig_search_memory,
+                    style={
+                        # Setting max width, max height and margin bottom.
+                        "max-width": "800px",
+                        "display": "inline-block",
+                        "width": "49%",
+                    },
+                ),
+            ]
+        ),
+        html.H2("Update-add performance"),
+        html.Div(
+            [
+                dcc.Graph(
+                    id="fig-update_add-time",
+                    figure=fig_update_add_time,
+                    style={
+                        # Setting max width, max height and margin bottom.
+                        "max-width": "800px",
+                        "display": "inline-block",
+                        "width": "49%",
+                    },
+                ),
+                dcc.Graph(
+                    id="fig-update_add-memory",
+                    figure=fig_update_add_memory,
+                    style={
+                        # Setting max width, max height and margin bottom.
+                        "max-width": "800px",
+                        "display": "inline-block",
+                        "width": "49%",
+                    },
+                ),
+            ]
+        ),
+        html.H2("Update-delete performance"),
+        html.Div(
+            [
+                dcc.Graph(
+                    id="fig-update_del-time",
+                    figure=fig_update_del_time,
+                    style={
+                        # Setting max width, max height and margin bottom.
+                        "max-width": "800px",
+                        "display": "inline-block",
+                        "width": "49%",
+                    },
+                ),
+                dcc.Graph(
+                    id="fig-update_del-memory",
+                    figure=fig_update_del_memory,
                     style={
                         # Setting max width, max height and margin bottom.
                         "max-width": "800px",
