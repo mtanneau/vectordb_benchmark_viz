@@ -1,0 +1,9 @@
+{
+  "step": "search-milvus-HNSW_PQ-topk100",
+  "wall_time_sec": 73.2553,
+  "cpu_time_sec": 37.187,
+  "py_heap_peak_mb": 0.716,
+  "rss_avg_mb": 236.641,
+  "rss_max_mb": 236.641,
+  "profiler": "builtin"
+}

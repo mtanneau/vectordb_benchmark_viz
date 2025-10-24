@@ -1,0 +1,9 @@
+{
+  "step": "search-milvus-IVF_FLAT-topk50",
+  "wall_time_sec": 61.5844,
+  "cpu_time_sec": 28.756,
+  "py_heap_peak_mb": 0.714,
+  "rss_avg_mb": 519.453,
+  "rss_max_mb": 519.453,
+  "profiler": "builtin"
+}

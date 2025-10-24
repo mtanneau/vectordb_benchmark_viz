@@ -1,0 +1,55 @@
+# Note: L2 metric for all
+# all parameters (at least milvus) are the default values in documentation. They are not tuned.
+# faiss ivfpq parameters changed to match milvus_ivf_pq defaults
+# also m and M are different!!!!
+# see https://milvus.io/docs/ivf-flat.md (can click through differnt index types) for more details on parameters
+
+weviate_hnsw: default
+
+milvus_ivf_flat:
+      index_params:
+            nlist: 64
+
+milvus_ivf_pq:
+      index_params:
+            nlist: 128
+            m: 4
+            nbits: 8
+            nprobe: 8
+
+milvus_ivf_sq8:
+      index_params:
+            nlist: 64
+
+
+milvus_hnsw:
+      index_params:
+            M: 64
+            efConstruction: 64
+
+milvus_hnsw_sq:
+      index_params:
+            M: 64
+            efConstruction: 64
+            sq_type: "SQ6"
+            refine: true
+            refine_type: "SQ8"
+
+milvus_hnsw_pq:
+      index_params:
+            M: 30
+            efConstruction: 360
+            m: 4
+            nbits: 8
+            refine: true
+            refine_type: "SQ8"
+
+faiss_ivfpq:
+      index_params:
+            nlist: 128
+            m: 4
+            nbits: 8
+            nprobe: 8
+    
+
+faiss_flat: None # none needed

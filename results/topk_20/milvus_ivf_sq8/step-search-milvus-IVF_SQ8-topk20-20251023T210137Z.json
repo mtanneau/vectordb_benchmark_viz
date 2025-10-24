@@ -1,0 +1,9 @@
+{
+  "step": "search-milvus-IVF_SQ8-topk20",
+  "wall_time_sec": 68.9542,
+  "cpu_time_sec": 34.9323,
+  "py_heap_peak_mb": 0.712,
+  "rss_avg_mb": 709.453,
+  "rss_max_mb": 709.453,
+  "profiler": "builtin"
+}

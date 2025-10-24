@@ -1,0 +1,9 @@
+{
+  "step": "update-delete-weaviate.hnsw-hnsw",
+  "wall_time_sec": 0.0723,
+  "cpu_time_sec": 0.0407,
+  "py_heap_peak_mb": 0.033,
+  "rss_avg_mb": 0.0,
+  "rss_max_mb": 0.0,
+  "profiler": "builtin"
+}

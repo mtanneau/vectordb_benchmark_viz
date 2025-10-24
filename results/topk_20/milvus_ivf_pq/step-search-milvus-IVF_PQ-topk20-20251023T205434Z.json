@@ -1,0 +1,9 @@
+{
+  "step": "search-milvus-IVF_PQ-topk20",
+  "wall_time_sec": 59.7442,
+  "cpu_time_sec": 28.2937,
+  "py_heap_peak_mb": 0.712,
+  "rss_avg_mb": 674.484,
+  "rss_max_mb": 674.484,
+  "profiler": "builtin"
+}

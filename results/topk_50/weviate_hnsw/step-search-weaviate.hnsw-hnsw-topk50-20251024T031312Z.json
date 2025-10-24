@@ -1,0 +1,9 @@
+{
+  "step": "search-weaviate.hnsw-hnsw-topk50",
+  "wall_time_sec": 134.2401,
+  "cpu_time_sec": 63.3999,
+  "py_heap_peak_mb": 0.716,
+  "rss_avg_mb": 208.625,
+  "rss_max_mb": 208.625,
+  "profiler": "builtin"
+}

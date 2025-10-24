@@ -1,0 +1,9 @@
+{
+  "step": "update-add-milvus-IVF_FLAT",
+  "wall_time_sec": 0.4788,
+  "cpu_time_sec": 0.0476,
+  "py_heap_peak_mb": 0.138,
+  "rss_avg_mb": 0.0,
+  "rss_max_mb": 0.0,
+  "profiler": "builtin"
+}

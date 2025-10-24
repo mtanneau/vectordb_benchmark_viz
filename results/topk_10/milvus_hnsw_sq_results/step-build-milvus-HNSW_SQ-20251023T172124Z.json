@@ -1,0 +1,9 @@
+{
+  "step": "build-milvus-HNSW_SQ",
+  "wall_time_sec": 28.1148,
+  "cpu_time_sec": 21.9327,
+  "py_heap_peak_mb": 393.682,
+  "rss_avg_mb": 0.0,
+  "rss_max_mb": 0.0,
+  "profiler": "builtin"
+}

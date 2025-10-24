@@ -1,0 +1,9 @@
+{
+  "step": "search-qdrant.hnsw-topk50",
+  "wall_time_sec": 134.3129,
+  "cpu_time_sec": 72.5851,
+  "py_heap_peak_mb": 1.005,
+  "rss_avg_mb": 221.062,
+  "rss_max_mb": 221.062,
+  "profiler": "builtin"
+}

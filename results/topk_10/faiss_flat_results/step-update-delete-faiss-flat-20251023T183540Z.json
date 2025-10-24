@@ -1,0 +1,9 @@
+{
+  "step": "update-delete-faiss-flat",
+  "wall_time_sec": 0.0012,
+  "cpu_time_sec": 0.0012,
+  "py_heap_peak_mb": 0.001,
+  "rss_avg_mb": 0.0,
+  "rss_max_mb": 0.0,
+  "profiler": "builtin"
+}

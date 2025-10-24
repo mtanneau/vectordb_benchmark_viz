@@ -1,0 +1,9 @@
+{
+  "step": "update-delete-milvus-HNSW",
+  "wall_time_sec": 0.2047,
+  "cpu_time_sec": 0.0022,
+  "py_heap_peak_mb": 0.013,
+  "rss_avg_mb": 0.0,
+  "rss_max_mb": 0.0,
+  "profiler": "builtin"
+}

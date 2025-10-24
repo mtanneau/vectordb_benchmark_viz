@@ -1,0 +1,9 @@
+{
+  "step": "update-delete-qdrant.hnsw",
+  "wall_time_sec": 0.0049,
+  "cpu_time_sec": 0.0028,
+  "py_heap_peak_mb": 0.074,
+  "rss_avg_mb": 0.0,
+  "rss_max_mb": 0.0,
+  "profiler": "builtin"
+}

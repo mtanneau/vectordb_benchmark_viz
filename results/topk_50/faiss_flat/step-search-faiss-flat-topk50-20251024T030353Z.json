@@ -1,0 +1,9 @@
+{
+  "step": "search-faiss-flat-topk50",
+  "wall_time_sec": 16.3385,
+  "cpu_time_sec": 18.3151,
+  "py_heap_peak_mb": 0.635,
+  "rss_avg_mb": 822.312,
+  "rss_max_mb": 822.312,
+  "profiler": "builtin"
+}

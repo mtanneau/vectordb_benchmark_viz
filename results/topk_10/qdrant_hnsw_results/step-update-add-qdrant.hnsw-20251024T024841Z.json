@@ -1,0 +1,9 @@
+{
+  "step": "update-add-qdrant.hnsw",
+  "wall_time_sec": 3.9683,
+  "cpu_time_sec": 0.0829,
+  "py_heap_peak_mb": 1.208,
+  "rss_avg_mb": 0.0,
+  "rss_max_mb": 0.0,
+  "profiler": "builtin"
+}

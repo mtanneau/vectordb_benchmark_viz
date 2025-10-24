@@ -1,0 +1,9 @@
+{
+  "step": "search-faiss-ivfpq",
+  "wall_time_sec": 1.7807,
+  "cpu_time_sec": 2.9595,
+  "py_heap_peak_mb": 0.63,
+  "rss_avg_mb": 914.391,
+  "rss_max_mb": 914.391,
+  "profiler": "builtin"
+}
