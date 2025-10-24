@@ -21,11 +21,16 @@ BACKENDS = [
 
 TOPK_VALUES = [10, 20, 50, 100]
 
-results = {}
-u = []
+SEARCH_COUNT = 20000
+ADD_COUNT = 50
+DEL_COUNT = 30
+
 
 
 def load_results():
+    results = {}
+    u = []
+
     for k in TOPK_VALUES:
         results[k] = res_k = {}
         backend_res_dirs = os.listdir(os.path.join("results", f"topk_{k}"))
@@ -65,7 +70,7 @@ def load_results():
                             "backend": backend,
                             "k": k,
                             "step": "search",
-                            "wall_time_sec": r["wall_time_sec"],
+                            "wall_time_sec": 1000 * r["wall_time_sec"] / SEARCH_COUNT,  # search time in milleseconds
                             "memory": r["py_heap_peak_mb"],
                         }
                     )
@@ -76,7 +81,7 @@ def load_results():
                             "backend": backend,
                             "k": k,
                             "step": "update-add",
-                            "wall_time_sec": r["wall_time_sec"],
+                            "wall_time_sec": 1000 * r["wall_time_sec"] / ADD_COUNT,  # update time in milleseconds
                             "memory": r["py_heap_peak_mb"],
                         }
                     )
@@ -87,7 +92,7 @@ def load_results():
                             "backend": backend,
                             "k": k,
                             "step": "update-del",
-                            "wall_time_sec": r["wall_time_sec"],
+                            "wall_time_sec": 1000 * r["wall_time_sec"] / DEL_COUNT,  # update time in milleseconds
                             "memory": r["py_heap_peak_mb"],
                         }
                     )
