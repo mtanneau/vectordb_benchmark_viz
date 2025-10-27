@@ -128,14 +128,14 @@ fig_search_time = px.line(
     y="wall_time_sec",
     color="backend",
     labels={"wall_time_sec": "Average search time (ms)", "k": "top-k neighbors"},
-)
+).update_traces(mode="lines+markers")
 fig_search_memory = px.line(
     df[(df["step"] == "search")],
     x="k",
     y="memory",
     color="backend",
     labels={"memory": "Memory (Mb)", "k": "top-k neighbors"},
-)
+).update_traces(mode="lines+markers")
 
 # Update-add
 fig_update_add_time = px.bar(
@@ -175,6 +175,20 @@ app = dash.Dash("Vector DB Benchmark")
 app.layout = html.Div(
     [
         html.H1("Vector database benchmark"),
+        # Dataset information
+        html.H2("Dataset"),
+        html.Ul(
+            [
+                # Show dataset URL
+                html.Li(
+                    "https://huggingface.co/datasets/sagecontinuum/INQUIRE-Benchmark-small"
+                ),
+                # Dataset stats: number of vectors, vector dimension, vector type, distance metric
+                html.Li("Number of vectors: 20,000"),
+                html.Li("Vector dimension: 768"),
+            ]
+        ),
+        # Benchmark results
         html.H2("Index build"),
         html.Div(
             [
@@ -202,6 +216,9 @@ app.layout = html.Div(
         ),
         html.H2("Search performance"),
         html.Div(
+            children=f"Average search time (in ms) across {SEARCH_COUNT} queries"
+        ),
+        html.Div(
             [
                 dcc.Graph(
                     id="fig-search-time",
@@ -227,6 +244,9 @@ app.layout = html.Div(
         ),
         html.H2("Update-add performance"),
         html.Div(
+            children=f"Average update time (in ms) to add {ADD_COUNT} data points"
+        ),
+        html.Div(
             [
                 dcc.Graph(
                     id="fig-update_add-time",
@@ -251,6 +271,9 @@ app.layout = html.Div(
             ]
         ),
         html.H2("Update-delete performance"),
+        html.Div(
+            children=f"Average update time (in ms) to delete {DEL_COUNT} data points"
+        ),
         html.Div(
             [
                 dcc.Graph(
