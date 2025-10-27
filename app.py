@@ -7,16 +7,16 @@ import plotly.express as px
 from dash import dcc, html
 
 BACKENDS = [
-    "milvus_ivf_flat",
-    "milvus_hnsw_pq",
     "faiss_flat",
-    "milvus_ivf_sq8",
-    "qdrant_hnsw",
     "faiss_ivf_pq",
     "milvus_hnsw",
     "milvus_hnsw_sq",
-    "weviate_hnsw",
+    "milvus_hnsw_pq",
+    "milvus_ivf_flat",
+    "milvus_ivf_sq8",
     "milvus_ivf_pq",
+    "weviate_hnsw",
+    "qdrant_hnsw",
 ]
 
 TOPK_VALUES = [10, 20, 50, 100]
