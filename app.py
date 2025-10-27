@@ -26,7 +26,6 @@ ADD_COUNT = 50
 DEL_COUNT = 30
 
 
-
 def load_results():
     results = {}
     u = []
@@ -70,7 +69,9 @@ def load_results():
                             "backend": backend,
                             "k": k,
                             "step": "search",
-                            "wall_time_sec": 1000 * r["wall_time_sec"] / SEARCH_COUNT,  # search time in milleseconds
+                            "wall_time_sec": 1000
+                            * r["wall_time_sec"]
+                            / SEARCH_COUNT,  # search time in milleseconds
                             "memory": r["py_heap_peak_mb"],
                         }
                     )
@@ -81,7 +82,9 @@ def load_results():
                             "backend": backend,
                             "k": k,
                             "step": "update-add",
-                            "wall_time_sec": 1000 * r["wall_time_sec"] / ADD_COUNT,  # update time in milleseconds
+                            "wall_time_sec": 1000
+                            * r["wall_time_sec"]
+                            / ADD_COUNT,  # update time in milleseconds
                             "memory": r["py_heap_peak_mb"],
                         }
                     )
@@ -92,7 +95,9 @@ def load_results():
                             "backend": backend,
                             "k": k,
                             "step": "update-del",
-                            "wall_time_sec": 1000 * r["wall_time_sec"] / DEL_COUNT,  # update time in milleseconds
+                            "wall_time_sec": 1000
+                            * r["wall_time_sec"]
+                            / DEL_COUNT,  # update time in milleseconds
                             "memory": r["py_heap_peak_mb"],
                         }
                     )
@@ -215,9 +220,7 @@ app.layout = html.Div(
             ]
         ),
         html.H2("Search performance"),
-        html.Div(
-            children=f"Average search time (in ms) across {SEARCH_COUNT} queries"
-        ),
+        html.Div(children=f"Average search time (in ms) across {SEARCH_COUNT} queries"),
         html.Div(
             [
                 dcc.Graph(
