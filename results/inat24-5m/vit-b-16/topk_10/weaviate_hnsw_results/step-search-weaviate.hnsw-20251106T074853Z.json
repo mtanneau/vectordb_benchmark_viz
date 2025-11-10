@@ -1,0 +1,9 @@
+{
+  "step": "search-weaviate.hnsw",
+  "wall_time_sec": 1.9107,
+  "cpu_time_sec": 0.0374,
+  "py_heap_peak_mb": 0.06,
+  "rss_avg_mb": 8286.547,
+  "rss_max_mb": 8286.547,
+  "profiler": "builtin"
+}

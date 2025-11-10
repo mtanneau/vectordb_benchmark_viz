@@ -1,0 +1,9 @@
+{
+  "step": "search-faiss",
+  "wall_time_sec": 0.017,
+  "cpu_time_sec": 0.0156,
+  "py_heap_peak_mb": 0.007,
+  "rss_avg_mb": 27123.078,
+  "rss_max_mb": 27123.078,
+  "profiler": "builtin"
+}

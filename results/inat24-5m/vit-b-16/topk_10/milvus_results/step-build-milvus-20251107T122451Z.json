@@ -1,0 +1,9 @@
+{
+  "step": "build-milvus",
+  "wall_time_sec": 4913.5918,
+  "cpu_time_sec": 4196.1607,
+  "py_heap_peak_mb": 18.551,
+  "rss_avg_mb": 0.0,
+  "rss_max_mb": 0.0,
+  "profiler": "builtin"
+}

@@ -1,0 +1,9 @@
+{
+  "step": "build-faiss",
+  "wall_time_sec": 2331.1532,
+  "cpu_time_sec": 3108.2934,
+  "py_heap_peak_mb": 9403.409,
+  "rss_avg_mb": 0.0,
+  "rss_max_mb": 0.0,
+  "profiler": "builtin"
+}

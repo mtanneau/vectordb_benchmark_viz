@@ -1,0 +1,9 @@
+{
+  "step": "update-add-weaviate.hnsw",
+  "wall_time_sec": 36.397,
+  "cpu_time_sec": 1.0302,
+  "py_heap_peak_mb": 0.682,
+  "rss_avg_mb": 0.0,
+  "rss_max_mb": 0.0,
+  "profiler": "builtin"
+}
