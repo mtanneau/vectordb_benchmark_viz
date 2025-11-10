@@ -416,8 +416,63 @@ def update_figures(selected_dataset, selected_embedding):
         ),
     }
 
+    
+    # Update-add performance
+    _df_add = _df[_df["step_name"] == "update-add"]
+    tr_add_time = go.Bar(x=_df_add["backend_long"], y=_df_add["wall_time_sec"])
+    fig_add_time = {
+        "data": [tr_add_time],
+        "layout": go.Layout(
+            title="Update-add time",
+            xaxis={"title": "VectorDB backend"},
+            yaxis={
+                "title": "Update time (s)",
+            },
+            hovermode="closest",
+        ),
+    }
+    tr_add_mem = go.Bar(x=_df_add["backend_long"], y=_df_add["py_heap_peak_mb"])
+    fig_add_mem = {
+        "data": [tr_add_mem],
+        "layout": go.Layout(
+            title="Update-add memory (Mb)",
+            xaxis={"title": "VectorDB backend"},
+            yaxis={
+                "title": "Memory (Mb)",
+            },
+            hovermode="closest",
+        ),
+    }
 
-    return fig_build_time, fig_build_mem, fig_search_time, fig_search_mem, {}, {}, {}, {}
+    # Update-del performance
+    _df_del = _df[_df["step_name"] == "update-delete"]
+    tr_del_time = go.Bar(x=_df_del["backend_long"], y=_df_del["wall_time_sec"])
+    fig_del_time = {
+        "data": [tr_del_time],
+        "layout": go.Layout(
+            title="Update-delete time",
+            xaxis={"title": "VectorDB backend"},
+            yaxis={
+                "title": "Update time (s)",
+            },
+            hovermode="closest",
+        ),
+    }
+    tr_del_mem = go.Bar(x=_df_del["backend_long"], y=_df_del["py_heap_peak_mb"])
+    fig_del_mem = {
+        "data": [tr_del_mem],
+        "layout": go.Layout(
+            title="Update-delete memory (Mb)",
+            xaxis={"title": "VectorDB backend"},
+            yaxis={
+                "title": "Memory (Mb)",
+            },
+            hovermode="closest",
+        ),
+    }
+
+
+    return fig_build_time, fig_build_mem, fig_search_time, fig_search_mem, fig_add_time, fig_add_mem, fig_del_time, fig_del_mem
 
     # fig_build_time = px.bar(
     #     df[(df["step_name"] == "build") & (df["k"] == 10)],
